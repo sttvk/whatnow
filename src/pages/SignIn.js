@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../logo.png";
+import logo from "../images/logo.png";
 import "./SignIn.css";
 import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../context/AuthContext";
