@@ -4,6 +4,6 @@
   padding: 0;
   max-width: 100vw;
   max-height: 100vh;
-  font-family: "Fuzzy Bubbles", cursive;
   overflow: auto;
+  font-family: "Fuzzy Bubbles", cursive;
 }
