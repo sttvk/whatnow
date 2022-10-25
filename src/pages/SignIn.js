@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import logo from "../logo.png";
 import "./SignIn.css";
 import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../context/AuthContext";
@@ -24,7 +25,7 @@ const Signin = () => {
 
   return (
     <div>
-      <h1 className="title">What Now?</h1>
+      <img src={logo} className="App-logo" alt="logo" />
       <div className="google-button">
         <GoogleButton onClick={handleGoogleSignIn} />
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../logo.png";
 import "./Home.css";
 import AddTodo from "../components/AddTodo";
 import Todo from "../components/Todo";
@@ -55,11 +56,7 @@ const Home = () => {
         <button className="logout-btn" onClick={handleSignOut}>
           Logout
         </button>
-      </div>
-      <div>
-        <div className="title-1">
-          <h1>What Now?</h1>
-        </div>
+        <img src={logo} className="App-logo" alt="logo" />
       </div>
       <div>
         <AddTodo />

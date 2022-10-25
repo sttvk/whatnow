@@ -1,7 +1,11 @@
-.title {
-  color: #3a3a3a;
-  text-align: center;
-  margin-top: 150px;
+.App-logo {
+  height: 110px;
+  width: 240px;
+  display: table;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  border-radius: 15px;
 }
 
 .google-button {
