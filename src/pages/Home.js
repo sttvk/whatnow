@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css";
-import Title from "../components/Title";
 import AddTodo from "../components/AddTodo";
 import Todo from "../components/Todo";
+import { UserAuth } from "../context/AuthContext";
 import {
   collection,
   query,
@@ -15,6 +15,15 @@ import { db } from "../firebase";
 
 const Home = () => {
   const [todos, setTodos] = React.useState([]);
+  const { logOut } = UserAuth();
+
+  const handleSignOut = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   React.useEffect(() => {
     const q = query(collection(db, "todos"));
@@ -43,7 +52,14 @@ const Home = () => {
   return (
     <div>
       <div>
-        <Title />
+        <button className="logout-btn" onClick={handleSignOut}>
+          Logout
+        </button>
+      </div>
+      <div>
+        <div className="title-1">
+          <h1>What Now?</h1>
+        </div>
       </div>
       <div>
         <AddTodo />

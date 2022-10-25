@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
+import "./SignIn.css";
 import { GoogleButton } from "react-google-button";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import "./SignIn.css";
 
 const Signin = () => {
   const { googleSignIn, user } = UserAuth();
@@ -20,7 +20,7 @@ const Signin = () => {
     if (user != null) {
       navigate("/Home");
     }
-  }, [user]);
+  });
 
   return (
     <div>
